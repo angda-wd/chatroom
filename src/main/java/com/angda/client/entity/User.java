@@ -3,7 +3,7 @@ public class User {
     private Integer id;
     private String username;
     private String password;
-    private String brief;
+    private String breif;
 
     public Integer getId() {
         return id;
@@ -29,14 +29,11 @@ public class User {
         this.password = password;
     }
 
-    public String getBrief() {
-        return this.brief;
+    public String getBreif() {
+        return breif;
     }
 
-    public void setBrief(String brief) {
-        this.brief = brief;
+    public void setBreif(String breif) {
+        this.breif = breif;
     }
-
-
-
 }

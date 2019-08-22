@@ -29,12 +29,12 @@ public class UserReg {
               //1.获取信息
               String username=userNameText.getText();
               String password=String.valueOf(passwordText.getPassword());
-              String brief=brieftext.getText();
+              String breif=brieftext.getText();
               //2.调用dao方法将信息持久化到数据库
                 User user=new User();
                 user.setUsername(username);
                 user.setPassword(password);
-                user.setBrief(brief);
+                user.setBreif(breif);
                 if(accountDao.userReg(user)){
                     JOptionPane.showMessageDialog(null,"注册成功",
                             "成功信息",JOptionPane.INFORMATION_MESSAGE);

@@ -13,7 +13,7 @@ public class AccountDaoTest {
         User user=new User();
         user.setUsername("test");
         user.setPassword("123");
-        user.setBrief("jsak");
+        user.setBreif("jsak");
         boolean b=accountDao.userReg(user);
         Assert.assertTrue(b);
 

@@ -13,12 +13,12 @@ public class AccountDao extends BasedDao {
         PreparedStatement preparedStatement=null;
         try{
             connection =getConnection();
-            String sql = "INSERT INTO user(username, password,brief)" +
+            String sql = "INSERT INTO user(username, password,breif)" +
                     " VALUES (?,?,?)";
             preparedStatement=connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1,user.getUsername());
             preparedStatement.setString(2, DigestUtils.md5Hex(user.getPassword()));
-            preparedStatement.setString(3,user.getBrief());
+            preparedStatement.setString(3,user.getBreif());
             int rows = preparedStatement.executeUpdate();
             if(rows==1){
                 return true;
@@ -48,7 +48,7 @@ public class AccountDao extends BasedDao {
                 user.setId(resultSet.getInt("id"));
                 user.setUsername(resultSet.getString("username"));
                 user.setPassword(resultSet.getString("password"));
-                user.setBrief(resultSet.getString("brief"));
+                user.setBreif(resultSet.getString("breif"));
                 return user;
 
             }
