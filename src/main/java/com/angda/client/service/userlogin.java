@@ -28,6 +28,7 @@ public class userlogin {
         frame.setContentPane(loginPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setSize(300,300);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         //点击注册按钮 跳转注册
